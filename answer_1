@@ -1,0 +1,50 @@
+class Animal{
+    public void makeSound(){
+        System.out.println("make sound animals ");
+    }
+}
+
+class Dog extends Animal {
+    public void makeSound(){
+        System.out.println("who who");
+    }
+
+}
+class Cat extends Animal {
+    public void makeSound(){
+        System.out.println("mehawwww");
+    }
+
+}
+
+class Cow extends Animal {
+    public void makeSound(){
+        System.out.println("mhooooooo");
+    }
+
+}
+class Sound{
+    public void poly(Animal a){
+        a.makeSound();
+    }
+}
+public class mock {
+
+    public static void main(String[] args) {
+       Animal a = new Animal();
+       Animal d = new Dog();
+       Animal c = new Cow();
+       Animal c2 = new Cat();
+
+       Sound s = new Sound();
+       s.poly(a);
+        s.poly(d);
+        s.poly(c);
+        s.poly(c2);
+
+
+    }
+
+
+}
+
