@@ -1,0 +1,28 @@
+interface drawable{
+    void draw();
+    
+}
+class Circle implements drawable{
+
+    @Override
+    public void draw() {
+        
+    }
+}
+class Rectangle implements drawable{
+
+    @Override
+    public void draw() {
+        
+    }
+}
+
+
+
+public class ansf {
+    public static void main(String[] args) {
+        
+        
+        
+    }
+}
