@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+abstract class Shape{
+    int a,b;
+    abstract public void calculateArea( );
+}
+
+class Rectangle extends Shape{
+
+    @Override
+    public void calculateArea() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("enter length and breath");
+        a = s.nextInt();
+        b = s.nextInt();
+        int area_re = a*b;
+        System.out.println("area of rectangle"+area_re);
+
+    }
+}
+
+class Circle extends Shape{
+
+    @Override
+    public void calculateArea() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("enter radius of circle");
+        a = s.nextInt();
+
+        double area_ci = 3.14*a*a;
+        System.out.println("area of circle"+area_ci);
+
+    }
+}
+
+class Triangle extends Shape{
+
+    @Override
+    public void calculateArea() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("enter sides of traigle");
+        a = s.nextInt();
+        b = s.nextInt();
+        double tr = 0.5*a*b;
+        System.out.println("area of triangle"+tr);
+
+
+    }
+}
+
+class ShapeCalculator{
+    public void printArea(Shape s ){
+        s.calculateArea();
+
+    }
+}
+
+
+
+public class answer2 {
+
+    public static void main(String[] args) {
+        ShapeCalculator sc = new ShapeCalculator();
+        Rectangle r = new Rectangle();
+        Triangle ti = new Triangle();
+        Circle c = new Circle();
+
+        sc.printArea(r);
+        sc.printArea(ti);
+        sc.printArea(c);
+    }
+
+
+
+
+}
